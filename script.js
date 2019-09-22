@@ -12,51 +12,60 @@ let li;
 // déclarer les variables et les tester - ok
 // créer les fonctions vides, nommer des verbes d'action - ok
 // remplir mes fonctions et tester la sortie (console.log) - 
-//  - tester les 3ére fonctions pour insérer une tâche à la fin de la liste.
-// tester une fonction globale
-// cabler les fonctions (clavier/sourie)
+//  - tester les fonctions pour insérer une tâche à la fin de la liste - ok
+// tester une fonction globale - ok
+// cabler les fonctions (clavier/sourie) - ok
 // finitions : option complémentaire
 
-// fonction créer un élément LI.
+// Fonction créer un élément LI.
 function createNewli() {
   li = document.createElement( `li` );
 }
 
-// fonction récupérer l'input et copier dans le LI créé.
+// Fonction récupérer l'input et copier dans le LI créé.
 function copyInputValueIntoNewLi() {
 li.append(document.createTextNode( userInput.value ));
 }
 
-// fonction insérer le Li et son text à la fin de la liste.
+// Fonction insérer le Li et son text à la fin de la liste.
 function insertNewElementLiAtEnd() {
 ul.insertAdjacentElement( "beforeend", li );
 }
 
+
+// Fonction globale pour activer les fonctions sauf s'il n'y a pas données.
 function RunMyTodolist() {
   if (userInput.value.length > 0) {
   createNewli();
   copyInputValueIntoNewLi();
   insertNewElementLiAtEnd();
+  removeInputValueValidated()
   }
 }
 
-//button.addEventListener(`click`, RunMyTodolist);
-
-// activer les 3 fonctions ci-dessus par un clic
-//button.addEventlistener( `click`, RunMyTodolist );
-//element.addEventListener(event, handler[, options]);
-
-// activer les 3 fonctions ci-dessus par enter.
-//function validateImputValueByEnter() {
-//  input.addEventListener ( `keypress` );
+// fonction pour cabler par un clic par nécessaire dans ce cas.
+//function validateImputValueByClic() {
 //}
 
+// fonction pour cable par enter.
+function validateImputValueByEnter() {
+  if (Key.keycode === 13) {
+    RunMyTodolist();
+  }
+}
 
+// Cabler le "button" et la touche enter aux fonctions.
+button.addEventListener(`click`, RunMyTodolist);
+input.addEventListener(`keypress`, validateImputValueByEnter);
 
-//function pasteImputValueToLi() {}
+// FINITION
 
-//function removeImputValueValidated() {}
+// Fonction pour supprimer les tâches saisies après validation par clic et enter.
+function removeInputValueValidated() {
+  userInput.value = "";
+}
 
+//
 
 
 
