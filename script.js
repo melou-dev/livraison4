@@ -16,6 +16,9 @@ let li;
 // tester une fonction globale - ok
 // cabler les fonctions (clavier/sourie) - ok
 // finitions : option complémentaire
+// - supprimer la tâche une fois valider - ok
+// - Majuscule pour première lettre et tout en minuscule 
+// - mise en forme
 
 // Fonction créer un élément LI.
 function createNewli() {
@@ -34,12 +37,13 @@ ul.insertAdjacentElement( "beforeend", li );
 
 
 // Fonction globale pour activer les fonctions sauf s'il n'y a pas données.
-function RunMyTodolist() {
-  if (userInput.value.length > 0) {
+function runMyTodolist() {
+  if ( userInput.value.length > 0 ) {
   createNewli();
   copyInputValueIntoNewLi();
   insertNewElementLiAtEnd();
-  removeInputValueValidated()
+  removeInputValueValidated();
+  capitalizeFLetter();
   }
 }
 
@@ -48,15 +52,15 @@ function RunMyTodolist() {
 //}
 
 // fonction pour cable par enter.
-function validateImputValueByEnter() {
-  if (Key.keycode === 13) {
-    RunMyTodolist();
+function validateImputValueByEnter(valid) {
+  if (valid.keyCode === 13) {
+    runMyTodolist();
   }
 }
 
 // Cabler le "button" et la touche enter aux fonctions.
-button.addEventListener(`click`, RunMyTodolist);
-input.addEventListener(`keypress`, validateImputValueByEnter);
+button.addEventListener( `click`, runMyTodolist );
+userInput.addEventListener( `keypress`, validateImputValueByEnter );
 
 // FINITION
 
@@ -65,7 +69,10 @@ function removeInputValueValidated() {
   userInput.value = "";
 }
 
-//
+// Revoir la fonction lundi
+//function capitalizeFLetter() { 
+//userInput.innerHTML = userInput.value[0].toUpperCase() + string.slice(1);
+//}
 
 
 

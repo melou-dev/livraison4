@@ -1,0 +1,16 @@
+
+Body {
+    color: yellowgreen;
+    background-image: url(gratisography-gear-contraption-thumbnail.jpg);
+    background-repeat: no-repeat;
+}
+
+ul {
+    padding-left: 2rem;
+    list-style-type: circle;
+}
+  
+  ul li {
+    padding-left: 2rem;
+    line-height: 2rem;
+}
