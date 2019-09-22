@@ -3,6 +3,8 @@ Body {
     color: yellowgreen;
     background-image: url(gratisography-gear-contraption-thumbnail.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5%; 
 }
 
 ul {
