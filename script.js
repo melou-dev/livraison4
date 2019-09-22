@@ -32,10 +32,21 @@ function insertNewElementLiAtEnd() {
 ul.insertAdjacentElement( "beforeend", li );
 }
 
-//function validateImputValueByClic() {
-//  button.addEventlistener( `click` );
-//}
+function RunMyTodolist() {
+  if (userInput.value.length > 0) {
+  createNewli();
+  copyInputValueIntoNewLi();
+  insertNewElementLiAtEnd();
+  }
+}
 
+//button.addEventListener(`click`, RunMyTodolist);
+
+// activer les 3 fonctions ci-dessus par un clic
+//button.addEventlistener( `click`, RunMyTodolist );
+//element.addEventListener(event, handler[, options]);
+
+// activer les 3 fonctions ci-dessus par enter.
 //function validateImputValueByEnter() {
 //  input.addEventListener ( `keypress` );
 //}
@@ -46,11 +57,7 @@ ul.insertAdjacentElement( "beforeend", li );
 
 //function removeImputValueValidated() {}
 
-//function RunMyTodolist() {
-//  function createNewli();
-//  function copyInputValueIntoNewLi();
-//  function insertNewElementLiAtEnd();
-//}
+
 
 
 
