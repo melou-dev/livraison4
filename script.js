@@ -1,12 +1,12 @@
 `use strict`;
 
-const userInput = document.body.querySelector(`#inputUser`);
+const userInput = document.body.querySelector(`#inputUser`).createTextNode(input.value);
 const button = document.body.querySelector(`button`);
 const ul = document.body.querySelector(`ul`);
 let li;
 
 // TESTEUR
-//userInput.addEventListener( `click`, () => alert(`ok Mélou`));
+// userInput.addEventListener( `click`, () => alert(`ok Mélou`));
 //element.addEventListener( "quoi" exemple "click", action an arrow fonction );
 
 // déclarer les variables et les tester - ok
@@ -24,6 +24,12 @@ function createNewli() {
 // fonction récupérer l'input et copier dans le LI créé.
 function copyInputValueIntoNewLI() {
  li.append( userInput );
+// li.append(document.createTextNode(input.value));
+}
+
+// fonction insérer le Li et son text à la fin de la liste.
+function insertNewElementLiAtEnd() {
+ul.insertAdjacentElement( "beforeend", li );
 }
 
 //function validateImputValueByClic() {
@@ -34,9 +40,7 @@ function copyInputValueIntoNewLI() {
 //  input.addEventListener ( `keypress` );
 //}
 
-//function createNewElementLiAtEnd() {
-// ul.createElement(`li`);
-//}
+
 
 //function pasteImputValueToLi() {}
 
