@@ -3,6 +3,7 @@
 const userInput = document.body.querySelector(`#inputUser`);
 const button = document.body.querySelector(`button`);
 const ul = document.body.querySelector(`ul`);
+let li;
 
 //TESTEUR
 userInput.addEventListener( `click`, () => alert(`ok Mélou`));
@@ -15,30 +16,30 @@ userInput.addEventListener( `click`, () => alert(`ok Mélou`));
 // cabler les fonctions (clavier/sourie)
 // finitions : option complémentaire
 
-
-function validateImputValueByClic() {
-  button.addEventlistener( `click` );
+// fonction créer un élément LI.
+function createNewli() {
+  li = document.createElement( `li` );
 }
 
-function validateImputValueByEnter() {
-  input.addEventListener ( `keypress` );
-}
+//fonction ré
 
-function createNewElementLiAtEnd() {
-  ul.createElement(`li`);
-}
+//function validateImputValueByClic() {
+//  button.addEventlistener( `click` );
+//}
 
-function pasteImputValueToLi() {}
+//function validateImputValueByEnter() {
+//  input.addEventListener ( `keypress` );
+//}
 
-function removeImputValueValidated() {}
+//function createNewElementLiAtEnd() {
+// ul.createElement(`li`);
+//}
 
-function RunMyTodolist() {}
+//function pasteImputValueToLi() {}
 
+//function removeImputValueValidated() {}
 
-
-
-
-
+//function RunMyTodolist() {}
 
 
 
