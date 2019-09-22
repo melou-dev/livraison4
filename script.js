@@ -5,8 +5,8 @@ const button = document.body.querySelector(`button`);
 const ul = document.body.querySelector(`ul`);
 let li;
 
-//TESTEUR
-userInput.addEventListener( `click`, () => alert(`ok Mélou`));
+// TESTEUR
+//userInput.addEventListener( `click`, () => alert(`ok Mélou`));
 //element.addEventListener( "quoi" exemple "click", action an arrow fonction );
 
 // déclarer les variables et les tester - ok
@@ -21,7 +21,10 @@ function createNewli() {
   li = document.createElement( `li` );
 }
 
-//fonction ré
+// fonction récupérer l'input et copier dans le LI créé.
+function copyInputValueIntoNewLI() {
+ li.append( userInput );
+}
 
 //function validateImputValueByClic() {
 //  button.addEventlistener( `click` );
